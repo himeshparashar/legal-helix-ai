@@ -1,0 +1,8 @@
+python-dotenv
+fastapi
+langchain
+langchain_core
+langchain_community
+langchain_openai
+langchain-qdrant
+sentence_transformers
