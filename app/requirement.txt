@@ -6,3 +6,4 @@ langchain_community
 langchain_openai
 langchain-qdrant
 sentence_transformers
+pypdf

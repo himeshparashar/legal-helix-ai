@@ -1,5 +1,5 @@
 from pydantic import BaseModel
 
-class ChatReqSchema(BaseModel):
+class chat_req_model(BaseModel):
+    query: str
     user_id: int
-    message: str

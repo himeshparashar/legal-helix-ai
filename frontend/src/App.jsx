@@ -52,13 +52,14 @@ function App() {
         Authorization: import.meta.env.VITE_AUTH_TOKEN,
       },
       body: JSON.stringify({
-        message: text,
+        query: text,
+        user_id: 123,
       }),
     };
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/completions`,
+        `${import.meta.env.VITE_API_URL}/api/chat_session`,
         options
       );
 
@@ -77,7 +78,8 @@ function App() {
 
       if (!data.error) {
         setErrorText("");
-        setMessage(data.choices[0].message);
+        setMessage(data);
+
         setTimeout(() => {
           scrollToLastItem.current?.lastElementChild?.scrollIntoView({
             behavior: "smooth",
